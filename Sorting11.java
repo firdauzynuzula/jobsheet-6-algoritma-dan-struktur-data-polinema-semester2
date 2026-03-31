@@ -28,7 +28,7 @@ public class Sorting11 {
         for (int i = 0; i < jumData; i++){
             System.out.print(data[i] + " ");
         }
-        System.out.println();
+        System.out.println("fff");
     }
 
 }
