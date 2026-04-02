@@ -38,8 +38,19 @@ public class Sorting11 {
         }
     }
 
-    
+    void insertionSort(){
+        for (int i = 1; i < jumData; i++){
+            int key = data[i];
+            int j = i - 1;
+            while (j >= 0 && data[j] > key){
+                data[j + 1] = data[j];
+                j--;
+            }
+            data[j + 1] = key;
+        }
+    }
 
+    
     void tampil(){
         for (int i = 0; i < jumData; i++){
             System.out.print(data[i] + " ");
