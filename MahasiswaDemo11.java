@@ -1,18 +1,32 @@
+import java.util.Scanner;
 public class MahasiswaDemo11 {
     public static void main(String[] args) {
         MahasiswaBerprestasi11 list = new MahasiswaBerprestasi11();
 
-        Mahasiswa11 m1 = new Mahasiswa11("123", "Zidan", "2A", 3.2);
-        Mahasiswa11 m2 = new Mahasiswa11("124", "Budi", "2A", 3.5);
-        Mahasiswa11 m3 = new Mahasiswa11("125", "Citra", "2A", 3.1);
-        Mahasiswa11 m4 = new Mahasiswa11("126", "Dewi", "2A", 3.9);
-        Mahasiswa11 m5 = new Mahasiswa11("127", "Eko", "2A", 3.7);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Masukkan jumlah mahasiswa: ");
 
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
+        Mahasiswa11[] listMhs = new Mahasiswa11[5];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Masukkan data mahasiswa ke-" + (i + 1));
+            System.out.print("NIM: ");
+            String nim = scanner.nextLine();
+            System.out.print("Nama: ");
+            String nama = scanner.nextLine();
+            System.out.print("Kelas: ");
+            String kelas = scanner.nextLine();
+            System.out.print("IPK: ");
+            double ipk = scanner.nextDouble();
+            scanner.nextLine(); // Consume newline
+
+            listMhs[i] = new Mahasiswa11(nim, nama, kelas, ipk);
+        }
+        list.tambah(listMhs[0]);
+        list.tambah(listMhs[1]);
+        list.tambah(listMhs[2]);
+        list.tambah(listMhs[3]);
+        list.tambah(listMhs[4]);
 
         System.out.println("Data mahasiswa sebelum disorting:");
         list.tampil();
@@ -20,5 +34,11 @@ public class MahasiswaDemo11 {
         System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
         list.bubbleSort();
         list.tampil();
+
+        System.out.println("Data yang sudah  terurut menggunakan SELECTION SORT (ASC) : ");
+        list.selectionSort();
+        list.tampil();
+
+        scanner.close();
     }
 }
