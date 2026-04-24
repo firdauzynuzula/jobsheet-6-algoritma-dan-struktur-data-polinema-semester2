@@ -4,7 +4,6 @@ public class MahasiswaDemo11 {
         MahasiswaBerprestasi11 list = new MahasiswaBerprestasi11();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Masukkan jumlah mahasiswa: ");
 
         Mahasiswa11[] listMhs = new Mahasiswa11[5];
 
