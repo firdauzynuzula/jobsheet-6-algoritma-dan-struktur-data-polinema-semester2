@@ -45,4 +45,19 @@ public class MahasiswaBerprestasi11 {
             listMhs[i] = temp;
         }
     }
+
+    void SelectionSortDescending() {
+        for (int i = 0; i < listMhs.length - 1; i++) {
+            int idxMax = i;
+            for (int j = i + 1; j < listMhs.length; j++) {
+                if (listMhs[j].ipk > listMhs[idxMax].ipk) {
+                    idxMax = j;
+                }
+            }
+            // Tukar
+            Mahasiswa11 temp = listMhs[idxMax];
+            listMhs[idxMax] = listMhs[i];
+            listMhs[i] = temp;
+        }
+    }
 }

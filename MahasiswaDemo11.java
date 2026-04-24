@@ -39,6 +39,10 @@ public class MahasiswaDemo11 {
         list.selectionSort();
         list.tampil();
 
+        System.out.println("Data yang sudah  terurut menggunakan SELECTION SORT (DESC) : ");
+        list.SelectionSortDescending();
+        list.tampil();
+
         scanner.close();
     }
 }
