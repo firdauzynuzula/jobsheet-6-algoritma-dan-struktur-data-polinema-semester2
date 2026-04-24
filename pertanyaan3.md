@@ -19,10 +19,10 @@ dengan cara descending.
 
 jawab:
 
-1. Untuk mengubah fungsi InsertionSort agar dapat melakukan sorting secara descending, kita perlu mengubah kondisi pada while loop dari `listMhs[j - 1].ipk > temp.ipk` menjadi `listMhs[j - 1].ipk < temp.ipk`. Berikut adalah fungsi yang telah diubah:
+1. Untuk mengubah fungsi InsertionSort agar dapat melakukan sorting secara descending, kita perlu mengubah kondisi pada while loop dari ">" menjadi "<". Berikut adalah modifikasi fungsi InsertionSort untuk sorting descending:
 
 
-void insertionSort() {
+void insertionSortDescending() {
     for (int i = 1; i < listMhs.length; i++) {
         Mahasiswa temp = listMhs[i];
         int j = i;
@@ -33,4 +33,3 @@ void insertionSort() {
         listMhs[j] = temp;
     }
 }
-Dengan perubahan ini, elemen dengan IPK yang lebih tinggi akan ditempatkan sebelum elemen dengan IPK yang lebih rendah, sehingga menghasilkan urutan descending.
